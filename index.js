@@ -1,10 +1,10 @@
 var EventEmitter = require('events').EventEmitter
   , assert = require('assert')
+  , vec3 = require('vec3');
 
 module.exports = init;
 
 // instantiated from init
-var vec3;
 var sideVecs;
 var materials;
 
@@ -28,7 +28,6 @@ var fallingBlockTypes = {
 };
 
 function init(mineflayer) {
-  vec3 = mineflayer.vec3;
   sideVecs = [
     vec3(-1,  0,  0),
     vec3( 1,  0,  0),
